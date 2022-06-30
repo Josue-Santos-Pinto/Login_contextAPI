@@ -4,13 +4,15 @@ export type UserType = {
     name: string,
     surName: string,
     tel: string,
-    email: string
+    email: string,
+    password: string
 }
 export const userInitialState: UserType = {
     name: '',
     surName:'',
     tel:'',
-    email:''
+    email:'',
+    password:''
 }
 
 export const userReducer = (state: UserType, action: reducerActionType) => {
@@ -23,6 +25,8 @@ export const userReducer = (state: UserType, action: reducerActionType) => {
             return{...state,tel:action.payload.tel}
         case 'CHANGE_EMAIL':
         return{...state,email:action.payload.email}
+        case 'CHANGE_PASSWORD':
+        return{...state,password:action.payload.password}
     }
 
     return state

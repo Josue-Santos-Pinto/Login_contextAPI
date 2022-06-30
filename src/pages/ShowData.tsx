@@ -30,14 +30,15 @@ export const ShowData = () => {
             color: state.theme.status === 'light' ? state.theme.lightColors.color : state.theme.darkColors.color
             }}>
             <h3>Info de Cadastro <span>Tema: [{state.theme.status}]</span></h3>
-            <button onClick={handleSwitchTheme}>Switch Theme</button>
+            <button onClick={handleSwitchTheme}>Switch Theme</button> <br />
             
-        {state.user.name && 
+        {state.user.name || state.user.email && 
           <>
                 Nome: {state.user.name} <br />
                 Sobrenome: {state.user.surName} <br />
                 Telefone: {state.user.tel} <br />
                 Email: {state.user.email} <br />
+                Senha: {state.user.password} <br />
           </>
         }
         {!state.user.name && 'Falha ao Carregar os Dados'} <br />

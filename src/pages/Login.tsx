@@ -3,24 +3,13 @@ import { Link } from 'react-router-dom'
 import React, { useContext,useState } from 'react'
 import { Context } from '../contexts/Context'
 
-export const SignUp = () => {
+export const Login = () => {
 
     const {state, dispatch} = useContext(Context)
-    const [nameInput,setNameInput] = useState('')
-    const [surNameInput,setSurNameInput] = useState('')
-    const [telInput,setTelInput] = useState('')
     const [emailInput,setEmailInput] = useState('')
     const [passwordInput,setPasswordInput] = useState('')
 
-    const handleNameChange = (e:React.ChangeEvent <HTMLInputElement>) => {
-       setNameInput(e.target.value)
-    }
-    const handleSurNameChange = (e:React.ChangeEvent <HTMLInputElement>) => {
-        setSurNameInput(e.target.value)
-    }
-    const handleTelChange = (e:React.ChangeEvent <HTMLInputElement>) => {
-        setTelInput(e.target.value)
-    }
+   
     const handleEmailChange = (e:React.ChangeEvent <HTMLInputElement>) => {
         setEmailInput(e.target.value)
     }
@@ -28,25 +17,8 @@ export const SignUp = () => {
         setPasswordInput(e.target.value)
     }
 
-    const handleSignUp = () => {
-        dispatch({
-            type:'CHANGE_NAME',
-            payload:{
-                name: nameInput
-            }
-        })
-        dispatch({
-            type:'CHANGE_SURNAME',
-            payload:{
-                surName: surNameInput
-            }
-        })
-        dispatch({
-            type:'CHANGE_TEL',
-            payload:{
-                tel: telInput
-            }
-        })
+    const handleLogin = () => {
+       
         dispatch({
             type:'CHANGE_EMAIL',
             payload:{
@@ -83,24 +55,7 @@ export const SignUp = () => {
                 <div className={styles.boxRight}>
                     <h3>Cadastrar-se</h3>
                 <form>
-                    <label>Nome* </label>
-                    <input type="text"
-                     placeholder='Ex: João'
-                     value={nameInput}
-                     onChange={handleNameChange}
-                     /> <br />
-                    <label>Sobrenome* </label>
-                    <input type="text"
-                     placeholder='Ex: Pedro'
-                     value={surNameInput}
-                     onChange={handleSurNameChange}
-                     /> <br />
-                    <label>Telefone* </label>
-                    <input type="tel" 
-                    placeholder='Ex: (00) 0000-0000'
-                    value={telInput}
-                    onChange={handleTelChange}
-                    /> <br />
+                    
                     <label>E-mail* </label>
                     <input type="email"
                     placeholder='Ex: abcdef@gmail.com'
@@ -113,11 +68,11 @@ export const SignUp = () => {
                      value={passwordInput}
                      onChange={handlePasswordChange}
                      /> <br />
-                     <Link className={styles.btn} onClick={handleSignUp} to={'/exibir'}> Cadastrar-se </Link>                
+                     <Link className={styles.btn} onClick={handleLogin} to={'/exibir'}> Login </Link>                
                 </form>
-                    <p>Já tem uma conta ? <br />
-                    <Link to={'/login'}>Clique Aqui</Link> para Logar</p>
-    
+
+                    <p>Não tem uma conta ? <br />
+                    <Link to={'/'}>Clique Aqui</Link> para Cadastrar</p>
                 </div>
                
             </main>
