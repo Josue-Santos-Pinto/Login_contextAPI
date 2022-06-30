@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import { ShowData } from './pages/ShowData'
 import { SignUp } from './pages/SignUp'
-import { Context } from './contexts/Context'
+
 
 const App = () => {
   return (

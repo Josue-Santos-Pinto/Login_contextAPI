@@ -5,9 +5,33 @@ import { Context } from "../contexts/Context"
 export const ShowData = () => {
 
     const {state, dispatch} = useContext(Context)
+
+    const handleSwitchTheme = () => {
+        if(state.theme.status === 'light'){
+            dispatch({
+                type:'CHANGE_STATUS',
+                payload:{
+                    status:'dark'
+                }
+            })
+        } else {
+            dispatch({
+                type:'CHANGE_STATUS',
+                payload:{
+                    status:'light'
+                }
+            }) 
+        }
+    }
+
     return (
-        <div>
-            <h3>Info de Cadastro</h3>
+        <div style={{
+            backgroundColor: state.theme.status === 'light' ? state.theme.lightColors.backgroundColor : state.theme.darkColors.backgroundColor,
+            color: state.theme.status === 'light' ? state.theme.lightColors.color : state.theme.darkColors.color
+            }}>
+            <h3>Info de Cadastro <span>Tema: [{state.theme.status}]</span></h3>
+            <button onClick={handleSwitchTheme}>Switch Theme</button>
+            
         {state.user.name && 
           <>
                 Nome: {state.user.name} <br />
