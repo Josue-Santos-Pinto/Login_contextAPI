@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.box{
+  height: 700px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  color: #52057B;
+}
+.boxLeft{
+  width: 50%;
+  height: 100%;
+  background-color: #52057B;
+}
+
+.boxRight{
+  background-color: #FFF;
+  height: 70%;
+  width: 30%;
+  border: 5px inset rgba(68, 77, 67,0.6);
+  padding: 20px;
+  margin: auto 0;
+}
+.boxRight h3{
+  text-align: center;
+}
+.boxRight label{
+  display: block;
+  margin: 10px;
+}
+.boxRight input{
+  height: 30px;
+  width: 100%;
+  outline: 0;
+  padding: 5px 7px;
+}
+
+.boxRight button{
+  margin: 30px auto;
+  cursor: pointer;
+  padding: 3px;
+}
+.boxRight button a{
+  text-decoration: none;
+  color: black;
+}
