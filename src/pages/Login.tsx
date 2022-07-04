@@ -42,8 +42,8 @@ export const Login = () => {
                 <div className={styles.boxLeft}>
                     <div className={styles.textBanner}>
                         <h2>
-                            Saiba tudo sobre <span>Games</span> 
-                            Promoções, Dicas e muito mais...
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        <span>reiciendis</span>
                         </h2>
                     </div>
                        

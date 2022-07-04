@@ -70,8 +70,8 @@ export const SignUp = () => {
                 <div className={styles.boxLeft}>
                     <div className={styles.textBanner}>
                         <h2>
-                            Saiba tudo sobre <span>Games</span> 
-                            Promoções, Dicas e muito mais...
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            <span>reiciendis</span>
                         </h2>
                     </div>
                        
@@ -86,30 +86,35 @@ export const SignUp = () => {
                     <label>Nome* </label>
                     <input type="text"
                      placeholder='Ex: João'
+                     required
                      value={nameInput}
                      onChange={handleNameChange}
                      /> <br />
                     <label>Sobrenome* </label>
                     <input type="text"
                      placeholder='Ex: Pedro'
+                     required
                      value={surNameInput}
                      onChange={handleSurNameChange}
                      /> <br />
                     <label>Telefone* </label>
                     <input type="tel" 
                     placeholder='Ex: (00) 0000-0000'
+                    required
                     value={telInput}
                     onChange={handleTelChange}
                     /> <br />
                     <label>E-mail* </label>
                     <input type="email"
                     placeholder='Ex: abcdef@gmail.com'
+                    required
                     value={emailInput}
                     onChange={handleEmailChange}
                     /> <br /> 
                     <label>Senha* </label>
                     <input type="password"
                      placeholder='Ex: 1234'
+                     required
                      value={passwordInput}
                      onChange={handlePasswordChange}
                      /> <br />
